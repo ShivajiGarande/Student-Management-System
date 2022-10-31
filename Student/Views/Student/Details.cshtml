@@ -1,0 +1,59 @@
+﻿@model MyApp.Models.StudentModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br />
+<br />
+<br />
+<h4>Student Information</h4>
+
+<table>
+    <tr>
+        <td>
+             @Html.DisplayNameFor(model => model.RollNumber)  :
+        </td>
+    </tr>
+</table>
+<div>
+    <hr />
+    <dl class="dl-horizontal table-bordered table-hover alert-success">
+        <dt>
+            @Html.DisplayNameFor(model => model.RollNumber)  : 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RollNumber) 
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentName)  :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentName) 
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)  :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender) 
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseId)  :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseId) 
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RollNumber }) |
+    @Html.ActionLink("Back to List", "DisplayStudent")
+</p>

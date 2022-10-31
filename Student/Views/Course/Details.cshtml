@@ -1,0 +1,45 @@
+﻿@model MyApp.Models.CourseModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br />
+<br />
+<br />
+<h2>Details</h2>
+
+<div>
+    <h4>CourseModel</h4>
+    <hr />
+    <dl class="dl-horizontal table-bordered table-hover alert-success">
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fees)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { CourseId = Model.CourseId }) |
+    @Html.ActionLink("Back to List", "DisplayCourse")
+</p>
